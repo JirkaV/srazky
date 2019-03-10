@@ -1,0 +1,5 @@
+        ProxyRequests Off
+        ProxyVia On
+
+        ProxyPass /apps/srazky http://127.0.0.1:8997
+        ProxyPassReverse /apps/srazky http://127.0.0.1:8997
