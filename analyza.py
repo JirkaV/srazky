@@ -42,7 +42,7 @@ def data_pro_mesic(kraj, mesic):
         try:
             with open(FNAME.format(kraj, den), 'rb') as f:
                 data[den] = data_z_html(f.read())
-        except FileNotFoundError:
+        except (FileNotFoundError, IndexError):
             data[den] = None
     return data
 
