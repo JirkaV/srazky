@@ -3,7 +3,6 @@ import time
 import logging
 import datetime
 import requests
-import lxml.html
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 FNAME = os.path.join(DATA_DIR, '{}_{}.html')
