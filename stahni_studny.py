@@ -33,7 +33,7 @@ def stahni(url):
         else:
             logging.error('{} - [{}] {}'.format(start_time, resp.status_code, url))
     except IOError as err:
-        logging.error('{} - [{}] {}: {}'.format(start_time, resp.status_code, url, str(err)))
+        logging.error('{} - {}: {}'.format(start_time, url, str(err)))
 
 def stahni_stanici(url, adresar, kraj):
     id_stanice = urlparse(url).query.split('=')[-1]

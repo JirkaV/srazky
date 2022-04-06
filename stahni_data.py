@@ -9,8 +9,8 @@ FNAME = os.path.join(DATA_DIR, '{}_{}.html')
 
 # odkazy jsou na vcerejsi den
 URLS = {
-  'hradecky': 'http://hydro.chmi.cz/hpps/hpps_act_rain.php?day_offset=-1&fpob=&fucpov=&fkraj=10838',
-  'pardubicky': 'http://hydro.chmi.cz/hpps/hpps_act_rain.php?day_offset=-1&fpob=&fucpov=&fkraj=12303',
+  'hradecky': 'https://hydro.chmi.cz/hpps/hpps_act_rain.php?day_offset=1&ordrstr=11&fkraj=86',
+  'pardubicky': 'https://hydro.chmi.cz/hpps/hpps_act_rain.php?day_offset=1&ordrstr=11&fkraj=94',
 }
 
 logging.basicConfig(filename='srazky.log',
@@ -20,7 +20,6 @@ logging.basicConfig(filename='srazky.log',
 
 
 if __name__ == '__main__':
-    os.chdir('/home/jirka/vojta')
     vcera = str(datetime.date.today() - datetime.timedelta(days=1))
     for prefix, url in URLS.items():
         fname = FNAME.format(prefix, vcera)

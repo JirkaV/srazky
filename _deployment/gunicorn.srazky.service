@@ -8,7 +8,7 @@ Restart=on-failure
 PIDFile=/var/webapps/srazky.pid
 User=srazky
 Group=srazky
-WorkingDirectory=/home/srazky
+WorkingDirectory=/home/srazky/srazky
 ExecStart=/home/srazky/.virtualenvs/srazky/bin/gunicorn --workers=2 --bind=127.0.0.1:8997 --error-logfile=/home/srazky/gunicorn.error.log --access-logfile=/home/srazky/gunicorn.access.log flask_web:app
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID

@@ -48,4 +48,4 @@ def data_pro_mesic(kraj, mesic):
 
 if __name__ == '__main__':
     import pprint
-    pprint.pprint(data_pro_mesic('hradecky', '201901'))
+    pprint.pprint(data_pro_mesic('hradecky', '202204'))
